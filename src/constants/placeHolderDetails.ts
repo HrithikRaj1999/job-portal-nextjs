@@ -1,16 +1,16 @@
 const placeholderJobs = [
-    {
-      title: "Full-Stack Developer at Stripe",
-      type: "Full-time",
-      companyName: "Stripe",
-      locationType: "Remote",
-      location: "San Francisco, California, United States",
-      applicationEmail: "apply@stripe.com",
-      applicationUrl: "https://stripe.com/apply",
-      slug: "full-stack-developer-at-stripe-1",
-      salary: 150000,
-      approved: true,
-      description: `
+  {
+    title: "Full-Stack Developer at Stripe",
+    type: "Full-time",
+    companyName: "Stripe",
+    locationType: "Remote",
+    location: "San Francisco, California, United States",
+    applicationEmail: "apply@stripe.com",
+    applicationUrl: "https://stripe.com/apply",
+    slug: "full-stack-developer-at-stripe-1",
+    salary: 150000,
+    approved: true,
+    description: `
   **About Stripe**
   
   Stripe is a global technology company that builds economic infrastructure for the internet. Our suite of products and services are designed to power commerce for online businesses of all sizes. At Stripe, we're looking for passionate, creative, and innovative developers to help build the next generation of payment platforms.
@@ -49,19 +49,19 @@ const placeholderJobs = [
   
   Stripe is an equal opportunity employer. We value diversity and are committed to creating an inclusive environment for all employees.
   `,
-    },
-    {
-      title: "Full-Stack Developer at Vercel",
-      type: "Full-time",
-      companyName: "Vercel",
-      locationType: "Hybrid",
-      location: "San Francisco, California, United States",
-      applicationEmail: "apply@vercel.com",
-      applicationUrl: "https://vercel.com/apply",
-      slug: "full-stack-developer-at-vercel-2",
-      salary: 120000,
-      approved: true,
-      description: `
+  },
+  {
+    title: "Full-Stack Developer at Vercel",
+    type: "Full-time",
+    companyName: "Vercel",
+    locationType: "Hybrid",
+    location: "San Francisco, California, United States",
+    applicationEmail: "apply@vercel.com",
+    applicationUrl: "https://vercel.com/apply",
+    slug: "full-stack-developer-at-vercel-2",
+    salary: 120000,
+    approved: true,
+    description: `
   **About Vercel:** 
   
   Vercel is a cloud platform for static sites and Serverless Functions that fits perfectly with your workflow. It enables developers to host Jamstack websites with ease.
@@ -104,18 +104,18 @@ const placeholderJobs = [
   
   Join us at Vercel and be a part of shaping the future of web development!
   `,
-    },
-    {
-      title: "ChatGPT Backend Developer at OpenAI",
-      type: "Part-time",
-      companyName: "OpenAI",
-      locationType: "On-site",
-      location: "San Francisco, California, United States",
-      applicationUrl: "https://openai.com/apply",
-      slug: "chatgpt-backend-developer-at-openai-3",
-      salary: 250000,
-      approved: true,
-      description: `
+  },
+  {
+    title: "ChatGPT Backend Developer at OpenAI",
+    type: "Part-time",
+    companyName: "OpenAI",
+    locationType: "On-site",
+    location: "San Francisco, California, United States",
+    applicationUrl: "https://openai.com/apply",
+    slug: "chatgpt-backend-developer-at-openai-3",
+    salary: 250000,
+    approved: true,
+    description: `
   **About OpenAI:**
   
   OpenAI is an AI research and deployment company dedicated to ensuring that artificial general intelligence (AGI) benefits all of humanity. We're leading the field in developing advanced AI models, like ChatGPT.
@@ -156,51 +156,51 @@ const placeholderJobs = [
   
   If you're passionate about AI and want to contribute to cutting-edge technology that impacts the world, join us at OpenAI!
   `,
-    },
-    {
-      title: "Intern at Coding in Flow",
-      type: "Internship",
-      companyName: "Coding in Flow",
-      locationType: "Remote",
-      applicationUrl: "https://codinginflow.com",
-      slug: "intern-at-coding-in-flow-4",
-      salary: 500,
-      approved: true,
-      description: `
+  },
+  {
+    title: "Intern at Coding in Flow",
+    type: "Internship",
+    companyName: "Coding in Flow",
+    locationType: "Remote",
+    applicationUrl: "https://codinginflow.com",
+    slug: "intern-at-coding-in-flow-4",
+    salary: 500,
+    approved: true,
+    description: `
   **Help build the best coding tutorials**
   
   I might not be able to pay you a lot, but I can offer you a lot of experience and a lot of fun. I'm looking for someone who is passionate about coding and wants to help me create the best coding tutorials on YouTube.
   `,
-    },
-    {
-      title: "Contractor at SmartDiary.co",
-      type: "Contract",
-      companyName: "SmartDiary.co",
-      locationType: "Remote",
-      applicationUrl: "https://smartdiary.co",
-      slug: "contractor-at-smartdiary-co-5",
-      salary: 30000,
-      approved: true,
-      description: `
+  },
+  {
+    title: "Contractor at SmartDiary.co",
+    type: "Contract",
+    companyName: "SmartDiary.co",
+    locationType: "Remote",
+    applicationUrl: "https://smartdiary.co",
+    slug: "contractor-at-smartdiary-co-5",
+    salary: 30000,
+    approved: true,
+    description: `
   **Help build the future of journaling**
   
   Smart Diary is the intelligent journaling app with AI integration. I'm looking for someone who can help me build this website. 
   
   Try it out for free at [https://smartdiary.co](https://smartdiary.co).
   `,
-    },
-    {
-      title: "Software Engineer at Microsoft",
-      type: "Temporary",
-      companyName: "Microsoft",
-      locationType: "On-site",
-      location: "Redmond, Washington, United States",
-      applicationEmail: "applications@microsoft.com",
-      applicationUrl: "https://careers.microsoft.com",
-      slug: "software-engineer-at-microsoft-6",
-      salary: 180000,
-      approved: true,
-      description: `
+  },
+  {
+    title: "Software Engineer at Microsoft",
+    type: "Temporary",
+    companyName: "Microsoft",
+    locationType: "On-site",
+    location: "Redmond, Washington, United States",
+    applicationEmail: "applications@microsoft.com",
+    applicationUrl: "https://careers.microsoft.com",
+    slug: "software-engineer-at-microsoft-6",
+    salary: 180000,
+    approved: true,
+    description: `
   **About Microsoft:**
   
   Microsoft is a global leader in software, services, devices, and solutions that help people and businesses realize their full potential. Renowned for products like Windows, Office, and Azure, Microsoft is continually innovating in the field of technology.
@@ -239,18 +239,18 @@ const placeholderJobs = [
   
   As a Microsoft contractor, you'll have the opportunity to work on exciting projects and make a significant impact in the tech world. Join us and be a part of Microsoft's innovative journey!
   `,
-    },
-    {
-      title: "Full-Stack Developer at Apple",
-      type: "Full-time",
-      companyName: "Apple Inc.",
-      locationType: "Hybrid",
-      location: "Cupertino, California, United States",
-      applicationUrl: "https://apple.com/apply",
-      slug: "full-stack-developer-at-apple-7",
-      salary: 200000,
-      approved: true,
-      description: `
+  },
+  {
+    title: "Full-Stack Developer at Apple",
+    type: "Full-time",
+    companyName: "Apple Inc.",
+    locationType: "Hybrid",
+    location: "Cupertino, California, United States",
+    applicationUrl: "https://apple.com/apply",
+    slug: "full-stack-developer-at-apple-7",
+    salary: 200000,
+    approved: true,
+    description: `
   **About Apple:**
   
   Apple is a pioneer in personal technology and a global leader in innovation, known for its iconic products like the iPhone, iPad, and Mac. Our mission is to create products that enrich people's lives and help them achieve their dreams.
@@ -292,19 +292,19 @@ const placeholderJobs = [
   
   Join Apple and be a part of a team that's dedicated to making a difference in the world through technology and innovation!
   `,
-    },
-    {
-      title: "Junior Web Developer at Shopify",
-      type: "Part-time",
-      companyName: "Shopify",
-      locationType: "Hybrid",
-      location: "Ottawa, Ontario, Canada",
-      applicationEmail: "career@shopify.com",
-      applicationUrl: "https://shopify.com/apply",
-      slug: "junior-web-developer-at-shopify-8",
-      salary: 90000,
-      approved: true,
-      description: `
+  },
+  {
+    title: "Junior Web Developer at Shopify",
+    type: "Part-time",
+    companyName: "Shopify",
+    locationType: "Hybrid",
+    location: "Ottawa, Ontario, Canada",
+    applicationEmail: "career@shopify.com",
+    applicationUrl: "https://shopify.com/apply",
+    slug: "junior-web-developer-at-shopify-8",
+    salary: 90000,
+    approved: true,
+    description: `
   **About Shopify:**
   
   Shopify is a leading global commerce company, providing trusted tools to start, grow, market, and manage a retail business of any size. Shopify makes commerce better for everyone with a platform and services that are engineered for reliability while delivering a better shopping experience for consumers everywhere.
@@ -343,7 +343,7 @@ const placeholderJobs = [
   
   This is a fantastic opportunity for those looking to kickstart their career in web development while working for one of the most innovative companies in e-commerce. Join us at Shopify and help redefine commerce around the world!
   `,
-    },
-  ];
-  
-export default placeholderJobs
+  },
+];
+
+module.exports = { placeholderJobs };
