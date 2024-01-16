@@ -1,9 +1,11 @@
-import { filterJobs, getDistinctLocation } from "@/utils/jobs/commonFunctions";
+import { filterJobs, getDistinctLocation } from "@/utils/jobs/jobUtilFunctions";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import Select from "../ui/select";
 import { jobTypes } from "@/constants/jobs/job-types";
 import { Button } from "../ui/button";
+import FormSubmitButton from "../ui/FormSubmitButton";
+import { JobFilterTypes } from "@/lib/validation";
 const OptionGenerate = ({ from }: { from: string[] }) => (
   <>
     <option value="">All</option>
@@ -15,7 +17,12 @@ const OptionGenerate = ({ from }: { from: string[] }) => (
   </>
 );
 
-const JobFilterSideBar = async () => {
+const JobFilterSideBar = async ({
+  filterValues: { search, type, location, remote },
+}: {
+  filterValues: JobFilterTypes;
+}) => {
+  console.log({ search, type, location, remote });
   const distinctLocation = await getDistinctLocation();
   return (
     <aside className="sticky top-0 h-fit rounded-lg border bg-background">
@@ -25,13 +32,18 @@ const JobFilterSideBar = async () => {
             <Label htmlFor="search" className="text-md">
               Search
             </Label>
-            <Input id="search" name="search" placeholder="Title, company, etc." />
+            <Input
+              defaultValue={search}
+              id="search"
+              name="search"
+              placeholder="Title, company, etc."
+            />
           </div>
           <div className="flex flex-col gap-3 p-4">
             <Label htmlFor="type" className="text-md">
               Job Type
             </Label>
-            <Select id="type" name="type">
+            <Select id="type" name="type" defaultValue={type}>
               <OptionGenerate from={jobTypes} />
             </Select>
           </div>
@@ -39,16 +51,22 @@ const JobFilterSideBar = async () => {
             <Label htmlFor="location" className="text-md">
               Location
             </Label>
-            <Select id="location" name="location">
+            <Select id="location" name="location" defaultValue={location}>
               <OptionGenerate from={distinctLocation} />
             </Select>
           </div>
           <div className="flex items-center gap-3 p-4">
-            <input id="remote" type="checkbox" name="remote" className="scale-125 accent-slate-900" />
+            <input
+              id="remote"
+              type="checkbox"
+              name="remote"
+              defaultChecked={remote}
+              className="scale-125 accent-slate-900"
+            />
             <Label htmlFor="remote">Remote Jobs</Label>
           </div>
           <div className="flex items-center gap-3 p-4">
-            <Button className=" w-full">Filter Jobs</Button>
+            <FormSubmitButton className=" w-full">Filter Jobs</FormSubmitButton>
           </div>
         </div>
       </form>

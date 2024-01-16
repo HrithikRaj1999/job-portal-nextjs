@@ -10,9 +10,7 @@ export const getDistinctLocation = async () => {
         select: { location: true },
         distinct: ["location"],
       })
-      .then((locations) =>
-        locations.map(({ location }) => location).filter(Boolean),
-      )) as string[];
+      .then((locations) => locations.map(({ location }) => location).filter(Boolean))) as string[];
   } catch (error) {
     return ["Patna"];
   }
@@ -30,15 +28,8 @@ export const filterJobs = async (formData: FormData) => {
   });
   redirect(`/?${searchParams.toString()}`);
 };
-
-export const getJobsResults = async ({
-  search,
-  type,
-  remote,
-  location,
-}: JobFilterTypes) => {
+export const getJobsResults = async ({ search, type, remote, location }: JobFilterTypes) => {
   const searchText = search?.replaceAll(" ", "&");
-  console.log({ searchText, type, remote, location });
   const searchFilter: Prisma.JobWhereInput = searchText
     ? {
         OR: [
@@ -52,13 +43,7 @@ export const getJobsResults = async ({
       }
     : {};
   const where: Prisma.JobWhereInput = {
-    AND: [
-      searchFilter,
-      type ? { type } : {},
-      location ? { location } : {},
-      remote ? { locationType: "Remote" } : {},
-      { approved: true },
-    ],
+    AND: [searchFilter, type ? { type } : {}, location ? { location } : {}, remote ? { locationType: "Remote" } : {}, { approved: true }],
   };
   try {
     return await prisma.job.findMany({

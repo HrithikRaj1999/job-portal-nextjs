@@ -2,7 +2,7 @@ import { formatCurrency, getTimeDifferenceOfCreatedAndNow } from "@/lib/utils";
 import { Job } from "@prisma/client";
 import { Banknote, Briefcase, Clock, Globe2, MapPin } from "lucide-react";
 import Image from "next/image";
-import Badge from "../Badge";
+import Badge from "../ui/Badge";
 
 interface JobListItemsProps {
   job: Job;

@@ -11,7 +11,9 @@ interface JobFilter {
     remote?: string;
   };
 }
-export default async function Home({ searchParams: { search, type, location, remote } }: JobFilter) {
+export default async function Home({
+  searchParams: { search, type, location, remote },
+}: JobFilter) {
   const filterValues: JobFilterTypes = {
     search,
     type,
@@ -25,7 +27,7 @@ export default async function Home({ searchParams: { search, type, location, rem
         <p className="text-muted-foreground"> Choose the job you like</p>
       </div>
       <section className="flex flex-col gap-4 md:flex-row">
-        <JobFilterSideBar />
+        <JobFilterSideBar filterValues={filterValues} />
         <JobsResults filterValues={filterValues} />
       </section>
     </main>
