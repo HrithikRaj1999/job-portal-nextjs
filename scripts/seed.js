@@ -1,5 +1,5 @@
-const {PrismaClient}=require('@prisma/client')
-const {placeholderJobs}= require("../src/constants/placeHolderDetails")
+const { PrismaClient } = require("@prisma/client");
+const { placeholderJobs } = require("../src/constants/placeHolderDetails");
 const prisma = new PrismaClient();
 
 async function main() {

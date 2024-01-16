@@ -19,9 +19,6 @@ const JobListItem = ({
     createdAt,
   },
 }: JobListItemsProps) => {
-  const date = new Date(createdAt);
-  const currentTime = new Date();
-  const timeDifference = (currentTime.getTime() - date.getTime()) / 3600;
   return (
     <>
       {" "}
@@ -55,10 +52,6 @@ const JobListItem = ({
               <p className="flex items-center gap-1.5 ">
                 <Banknote size={16} className="shrink-0" />
                 {formatCurrency(salary)}
-              </p>
-              <p className="flex items-center gap-1.5 sm:hidden ">
-                <Clock size={16} className="shrink-0" />
-                {getTimeDifferenceOfCreatedAndNow(createdAt)}
               </p>
             </div>
           </div>
