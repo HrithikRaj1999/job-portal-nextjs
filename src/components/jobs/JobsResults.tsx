@@ -6,9 +6,7 @@ import { JobFilterTypes } from "@/lib/validation";
 interface JobResultsProps {
   filterValues: JobFilterTypes;
 }
-const JobsResults = async ({
-  filterValues: { search, type, remote, location },
-}: JobResultsProps) => {
+const JobsResults = async ({ filterValues: { search, type, remote, location } }: JobResultsProps) => {
   const jobs = await getJobsResults({ search, type, remote, location });
   if (!jobs || !jobs.length) {
     return <>No Jobs Found Sorry !</>;
