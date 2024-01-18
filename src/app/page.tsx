@@ -16,7 +16,7 @@ interface JobFilter {
 //function name has be generateMetadata else next js will not identify this.
 export function generateMetadata({ searchParams: { search, type, location, remote } }: JobFilter): Metadata {
   return {
-    title: `${getTitle({ search, type, location, remote: remote === "true" })} | Swapna Karya`,
+    title: `${getTitle({ search, type, location, remote: remote === "true" })} | Swapna Karya | Find your dream job`,
     description: getTitle({ search, type, location, remote: remote === "true" }),
   };
 }
