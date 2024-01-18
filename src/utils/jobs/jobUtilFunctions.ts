@@ -59,6 +59,7 @@ export const getJobsResults = async ({
     ],
   };
   try {
+    console.log("Search job is ran");
     return await prisma.job.findMany({
       where,
       orderBy: { createdAt: "desc" },

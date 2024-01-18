@@ -19,6 +19,7 @@ import { useForm } from "react-hook-form";
 import RichTextEditor from "@/components/ui/RichTextEditor";
 import { draftToMarkdown } from "markdown-draft-js";
 import LoadingButton from "@/components/ui/LoadingButton";
+import { createJobPosting } from "./actions";
 
 const NewJobForm = () => {
   const form = useForm<CreateJobValues>({
@@ -33,11 +34,19 @@ const NewJobForm = () => {
     setFocus,
     formState: { isSubmitting },
   } = form;
-  const onSumit = (values: CreateJobValues) => {
+  const onSumit = async (values: CreateJobValues) => {
+    console.log({ values });
+    const formData = new FormData();
     try {
-      alert(JSON.stringify(values, null, 4));
+      Object.entries(values).forEach(([key, value]) => {
+        if (values) {
+          formData.append(key, value);
+        }
+      });
+
+      await createJobPosting(formData);
     } catch (error) {
-      console.error(error);
+      alert(error);
     }
   };
   return (
