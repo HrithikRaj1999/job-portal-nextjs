@@ -7,12 +7,29 @@ import Badge from "../ui/Badge";
 interface JobListItemsProps {
   job: Job;
 }
-const JobListItem = ({ job: { title, companyName, type, salary, location, locationType, companyLogoUrl, createdAt } }: JobListItemsProps) => {
+const JobListItem = ({
+  job: {
+    title,
+    companyName,
+    type,
+    salary,
+    location,
+    locationType,
+    companyLogoUrl,
+    createdAt,
+  },
+}: JobListItemsProps) => {
   return (
     <>
       {" "}
       <article className=" m-1 flex gap-4 rounded-lg  border p-2 hover:bg-muted/60">
-        <Image className="self-center rounded-xl" src={companyLogoUrl || "/company-logo.png"} alt={""} width={100} height={100} />
+        <Image
+          className="self-center rounded-xl"
+          src={companyLogoUrl || "/company-logo.png"}
+          alt={""}
+          width={100}
+          height={100}
+        />
         <div className=" flex w-full justify-between">
           <div className=" flex-col space-y-3">
             <div>

@@ -13,15 +13,24 @@ interface JobFilter {
     remote?: string;
   };
 }
-//function name has be generateMetadata else next js will not identify this.
-export function generateMetadata({ searchParams: { search, type, location, remote } }: JobFilter): Metadata {
+//this must be exported and function name has to be generateMetadata else next js will not identify this.
+export function generateMetadata({
+  searchParams: { search, type, location, remote },
+}: JobFilter): Metadata {
   return {
     title: `${getTitle({ search, type, location, remote: remote === "true" })} | Swapna Karya | Find your dream job`,
-    description: getTitle({ search, type, location, remote: remote === "true" }),
+    description: getTitle({
+      search,
+      type,
+      location,
+      remote: remote === "true",
+    }),
   };
 }
 
-export default async function Home({ searchParams: { search, type, location, remote } }: JobFilter) {
+export default async function Home({
+  searchParams: { search, type, location, remote },
+}: JobFilter) {
   const filterValues: JobFilterTypes = {
     search,
     type,

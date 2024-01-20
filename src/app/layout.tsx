@@ -14,7 +14,11 @@ export const metadata: Metadata = {
   description: "Find your dream job with Swapna Karya",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={`${inter.className} min-w-[400px]`}>

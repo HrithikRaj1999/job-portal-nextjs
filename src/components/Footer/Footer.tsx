@@ -30,7 +30,9 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="text-center text-sm text-muted-foreground">© {new Date().getFullYear()} Swapna Karya, Inc. All rights reserved.</div>
+        <div className="text-center text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Swapna Karya, Inc. All rights reserved.
+        </div>
       </div>
     </footer>
   );

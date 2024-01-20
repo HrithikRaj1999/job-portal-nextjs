@@ -6,6 +6,7 @@ import { nanoid } from "nanoid";
 import { put } from "@vercel/blob";
 import path from "path";
 import { redirect } from "next/navigation";
+
 export const createJobPosting = async (formData: FormData) => {
   const values = Object.fromEntries(formData.entries());
   const { companyLogo, ...filteredValues } = createJobSchema.parse(values);
