@@ -1,7 +1,7 @@
 import JobListItem from "@/components/jobs/JobListItem";
 import H1 from "@/components/ui/h1";
 import Link from "next/link";
-
+import prisma from "@/lib/prisma";
 export default async function AdminPage() {
   const unapprovedJobs = await prisma.job.findMany({
     where: { approved: false },
