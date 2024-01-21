@@ -11,6 +11,7 @@ interface JobFilter {
     type?: string;
     location?: string;
     remote?: string;
+    page?:string
   };
 }
 //this must be exported and function name has to be generateMetadata else next js will not identify this.
@@ -29,7 +30,7 @@ export function generateMetadata({
 }
 
 export default async function Home({
-  searchParams: { search, type, location, remote },
+  searchParams: { search, type, location, remote,page },
 }: JobFilter) {
   const filterValues: JobFilterTypes = {
     search,
@@ -45,7 +46,7 @@ export default async function Home({
       </div>
       <section className="flex flex-col gap-4 md:flex-row">
         <JobFilterSideBar filterValues={filterValues} />
-        <JobsResults filterValues={filterValues} />
+        <JobsResults filterValues={filterValues} page={page?parseInt(page):undefined}/>
       </section>
     </main>
   );

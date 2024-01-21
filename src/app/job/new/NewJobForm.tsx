@@ -63,7 +63,7 @@ const NewJobForm = () => {
                   <Input
                     placeholder="eg. Mern Stack developer"
                     {...field}
-                  //onBlur={() => trigger("title")}
+                    //onBlur={() => trigger("title")}
                   />
                 </FormControl>
                 <FormMessage />
@@ -80,7 +80,7 @@ const NewJobForm = () => {
                   <Select
                     {...field}
                     defaultValue={""}
-                  //onBlur={() => trigger("type")}
+                    //onBlur={() => trigger("type")}
                   >
                     <option value="" hidden>
                       Select an option
@@ -104,7 +104,7 @@ const NewJobForm = () => {
                   <Input
                     placeholder="eg. google"
                     {...field}
-                  //onBlur={() => trigger("companyName")}
+                    //onBlur={() => trigger("companyName")}
                   />
                 </FormControl>
                 <FormMessage />
@@ -147,7 +147,7 @@ const NewJobForm = () => {
                         trigger("location");
                     }}
                     defaultValue={""}
-                  // //onBlur={() => trigger("locationType")}
+                    // //onBlur={() => trigger("locationType")}
                   >
                     <option value="" hidden>
                       Select an option
@@ -190,7 +190,7 @@ const NewJobForm = () => {
                         type="email"
                         placeholder="Email"
                         {...field}
-                      //onBlur={() => trigger("companyName")}
+                        //onBlur={() => trigger("companyName")}
                       />
                     </FormControl>
                     <FormMessage />
@@ -208,7 +208,7 @@ const NewJobForm = () => {
                       <Input
                         placeholder="website"
                         {...field}
-                      //onBlur={() => trigger("companyName")}
+                        //onBlur={() => trigger("companyName")}
                       />
                     </FormControl>
                     <FormMessage />

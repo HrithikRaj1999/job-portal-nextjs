@@ -1,7 +1,7 @@
 import { JobFilterTypes, jobFilterSchema } from "@/lib/validation";
 import { redirect } from "next/navigation";
 import prisma from "@/lib/prisma";
-import { Prisma } from "@prisma/client";
+import { Job, Prisma } from "@prisma/client";
 export const getDistinctLocation = async () => {
   try {
     return (await prisma?.job
@@ -30,12 +30,19 @@ export const filterJobs = async (formData: FormData) => {
   });
   redirect(`/?${searchParams.toString()}`);
 };
+
+interface GetJobsReturnType {
+  jobs: Job[] | undefined;
+  totalResults: number;
+}
 export const getJobsResults = async ({
   search,
   type,
   remote,
   location,
-}: JobFilterTypes) => {
+  jobsPerPage,
+  skip,
+}: JobFilterTypes): Promise<GetJobsReturnType> => {
   const searchText = search?.replaceAll(" ", "&");
   const searchFilter: Prisma.JobWhereInput = searchText
     ? {
@@ -59,11 +66,18 @@ export const getJobsResults = async ({
     ],
   };
   try {
-    return await prisma.job.findMany({
+    const jobsPromise = prisma.job.findMany({
       where,
       orderBy: { createdAt: "desc" },
+      take: jobsPerPage,
+      skip,
     });
+    const countPromise = prisma.job.count({ where });
+
+    const [jobs, totalResults] = await Promise.all([jobsPromise, countPromise]);
+    return { jobs, totalResults };
   } catch (error) {
     console.error(error);
+    return { jobs: undefined, totalResults: 0 };
   }
 };

@@ -65,5 +65,7 @@ export const jobFilterSchema = z.object({
   type: z.string().optional(),
   location: z.string().optional(),
   remote: z.coerce.boolean().optional(),
+  jobsPerPage: z.number().optional(),
+  skip: z.number().optional(),
 });
 export type JobFilterTypes = z.infer<typeof jobFilterSchema>;

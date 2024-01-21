@@ -21,7 +21,6 @@ const JobListItem = ({
 }: JobListItemsProps) => {
   return (
     <>
-      {" "}
       <article className=" m-1 flex gap-4 rounded-lg  border p-2 hover:bg-muted/60">
         <Image
           className="self-center rounded-xl"
